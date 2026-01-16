@@ -9,9 +9,13 @@ const campionato = [
   { nome: 'Parma', puntifatti: 0, fallisubiti: 0 },
 ];
 
+const onlynamesandfault = [];
+
 for (let squadra of campionato) {
   squadra.puntifatti = generaterandom(1, 110);
   squadra.fallisubiti = generaterandom(1, 200);
+
+  onlynamesandfault.push(squadra.nome + ' ' + squadra.fallisubiti);
 }
 
 function generaterandom(min, max) {
@@ -19,3 +23,4 @@ function generaterandom(min, max) {
 }
 
 console.log(campionato);
+console.log(onlynamesandfault);

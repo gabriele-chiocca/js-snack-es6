@@ -8,3 +8,12 @@ const campionato = [
   { nome: 'Como', puntifatti: 0, fallisubiti: 0 },
   { nome: 'Parma', puntifatti: 0, fallisubiti: 0 },
 ];
+
+for (let squadra of campionato) {
+}
+
+generaterandom(1, 200);
+
+function generaterandom(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}

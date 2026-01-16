@@ -12,3 +12,14 @@ const bikes = [
 ];
 
 let biciminore = bikes[0].peso;
+
+function minorps(bike) {
+  for (let i = 0; i < bike.length; i++) {
+    if (bike[i].peso < biciminore) {
+      biciminore = bike[i].peso;
+    }
+  }
+}
+
+minorps(bikes);
+console.log(biciminore);

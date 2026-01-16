@@ -10,10 +10,12 @@ const campionato = [
 ];
 
 for (let squadra of campionato) {
+  squadra.puntifatti = generaterandom(1, 110);
+  squadra.fallisubiti = generaterandom(1, 200);
 }
-
-generaterandom(1, 200);
 
 function generaterandom(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
+
+console.log(campionato);

@@ -24,13 +24,22 @@ function minorps(bike) {
 } */
 
 //Con il for of
+/*
 for (let bici of bikes) {
   if (biciminore > bici.peso) {
     biciminore = bici.peso;
   }
-}
+} 
+  */
 
 //Reduce
 
+const pesoMinore = bikes.reduce((acc, bike) => {
+  if (acc > bike.peso) {
+    acc = bike.peso;
+  }
+  return acc;
+}, bikes[0].peso);
+
 // minorps(bikes);
-console.log(biciminore);
+console.log(pesoMinore);

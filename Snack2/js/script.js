@@ -9,8 +9,10 @@ const campionato = [
   { nome: 'Parma', puntifatti: 0, fallisubiti: 0 },
 ];
 
+//Array dove pushare i nomi e falli subiti
 const onlynamesandfault = [];
 
+//Per ogni obj nell'array fai ciò:
 for (let squadra of campionato) {
   squadra.puntifatti = generaterandom(1, 110);
   squadra.fallisubiti = generaterandom(1, 200);
@@ -18,9 +20,11 @@ for (let squadra of campionato) {
   onlynamesandfault.push(squadra.nome + ' ' + squadra.fallisubiti);
 }
 
+//Funzione genera num
 function generaterandom(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
+//log
 console.log(campionato);
 console.log(onlynamesandfault);
